@@ -4,5 +4,9 @@ Para instalar o projeto
 run `yarn && yarn start`
 
 para fazer build 
-yarn dev
-``
+
+`yarn dev`
+
+## URL browser 
+
+`http://localhost:8080/`
