@@ -18,15 +18,21 @@ module.exports = {
                 use: ["style-loader", "css-loader", "sass-loader"]
             },
             {
-                test: /\.js$/,
+                test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
                 use: ["babel-loader"]
             }
         ]
     },
+    resolve: {
+        extensions: ['*', '.js', '.jsx'],
+    },
+    optimization: {
+        splitChunks: { chunks: "all" }
+    },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "src", "index.html")
+            template: path.resolve(__dirname, "public", "index.html")
         })
     ],
 };

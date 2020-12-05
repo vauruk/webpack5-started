@@ -1,11 +1,7 @@
-//import "./style.css";
 import "./style.scss";
+import React, { Component } from 'react';
 
-console.log("Hello webpack!")
+import App from './screens/App'
+import { render } from "react-dom";
 
-const fancyFunc = () => {
-    return [1, 2];
-};
-
-const [a, b] = fancyFunc();
-console.log("object", a, b)
+render(<App />, document.getElementById("root"));
